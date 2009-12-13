@@ -65,12 +65,12 @@ public class Game {
     @Override
     public String toString() {
         StringBuilder result = new StringBuilder();
-        for (int y = 0; y < grid.length; y++) {
-            for (int x = 0; x < grid.length; x++) {
-                result.append(grid[y][x] ? "X" : ".");
-            }
-            result.append("\n");
-        }
+		for (boolean[] column : grid) {
+			for (int x = 0; x < grid.length; x++) {
+				result.append(column[x] ? "X" : ".");
+			}
+			result.append("\n");
+		}
 
         return result.deleteCharAt(result.lastIndexOf("\n")).toString();
     }

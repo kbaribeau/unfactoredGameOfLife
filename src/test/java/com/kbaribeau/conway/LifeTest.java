@@ -1,6 +1,5 @@
 package com.kbaribeau.conway;
 
-import org.junit.Ignore;
 import org.junit.Test;
 
 import static com.kbaribeau.conway.CustomMatchers.isCompletelyDead;
