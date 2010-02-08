@@ -5,7 +5,7 @@ public class Game {
 
     public Game(String start) {
         int sizeX = start.indexOf("\n");
-        int sizeY = (start.replaceAll("\n", "").length()) / sizeX;
+        int sizeY = start.split("\n").length;
         grid = new boolean[sizeY][sizeX];
 
         int x = 0, y = 0;
@@ -30,7 +30,7 @@ public class Game {
     public void tick() {
         Game newGame = new Game(toString());
         for (int y = 0; y < newGame.grid.length; y++) {
-            for (int x = 0; x < newGame.grid.length; x++) {
+            for (int x = 0; x < newGame.grid[0].length; x++) {
 				int neighborCount = 0;
 
 				if (hasLife(y -1, x -1)) neighborCount++;
@@ -66,7 +66,7 @@ public class Game {
     public String toString() {
         StringBuilder result = new StringBuilder();
 		for (boolean[] column : grid) {
-			for (int x = 0; x < grid.length; x++) {
+			for (int x = 0; x < grid[0].length; x++) {
 				result.append(column[x] ? "X" : ".");
 			}
 			result.append("\n");
