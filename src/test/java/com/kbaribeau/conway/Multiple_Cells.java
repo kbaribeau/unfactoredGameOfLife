@@ -2,7 +2,7 @@ package com.kbaribeau.conway;
 
 import org.junit.Test;
 
-import static com.kbaribeau.conway.CustomMatchers.evolvesTo;
+import static com.kbaribeau.conway.testsupport.CustomMatchers.evolvesTo;
 import static org.junit.Assert.assertThat;
 
 

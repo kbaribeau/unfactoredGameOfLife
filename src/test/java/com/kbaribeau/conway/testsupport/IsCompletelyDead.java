@@ -9,15 +9,7 @@ public class IsCompletelyDead extends BaseMatcher<Game> {
     @Override
     public boolean matches(Object o) {
         Game g = (Game) o;
-        for (int x = 0; x < g.grid.length; x++) {
-            for (int y = 0; y < g.grid[x].length; y++) {
-                if (g.grid[x][y]) {
-                    return false;
-                }
-
-            }
-        }
-        return true;
+        return g.toString().indexOf("X") == -1;
     }
 
     @Override

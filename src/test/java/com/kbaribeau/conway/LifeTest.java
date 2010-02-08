@@ -2,7 +2,7 @@ package com.kbaribeau.conway;
 
 import org.junit.Test;
 
-import static com.kbaribeau.conway.CustomMatchers.isCompletelyDead;
+import static com.kbaribeau.conway.testsupport.CustomMatchers.isCompletelyDead;
 import static org.hamcrest.CoreMatchers.equalTo;
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -28,7 +28,7 @@ public class LifeTest {
 				"...";
         Game game = new Game(grid);
 
-        assertThat(game.grid[0][0], is(true));
+        assertThat(game.isAlive(0, 0), is(true));
     }
 
     @Test
@@ -39,10 +39,10 @@ public class LifeTest {
 				"X.X";
 		Game game = new Game(grid);
 
-        assertThat(game.grid[0][0], is(true));
-        assertThat(game.grid[0][2], is(true));
-        assertThat(game.grid[2][0], is(true));
-        assertThat(game.grid[2][2], is(true));
+        assertThat(game.isAlive(0, 0), is(true));
+        assertThat(game.isAlive(0, 2), is(true));
+        assertThat(game.isAlive(2, 0), is(true));
+        assertThat(game.isAlive(2, 2), is(true));
     }
 
     @Test
@@ -130,7 +130,7 @@ public class LifeTest {
 
         game.tick();
 
-        assertThat(game.grid[1][1], is(false));
+        assertThat(game.isAlive(1, 1), is(false));
     }
 
     @Test
@@ -143,7 +143,7 @@ public class LifeTest {
 
         game.tick();
 
-        assertThat(game.grid[1][1], is(false));
+        assertThat(game.isAlive(1, 1), is(false));
     }
 
     @Test
@@ -156,7 +156,7 @@ public class LifeTest {
 
         game.tick();
 
-        assertThat(game.grid[1][1], is(false));
+        assertThat(game.isAlive(1, 1), is(false));
     }
 
     @Test
@@ -169,7 +169,7 @@ public class LifeTest {
 
         game.tick();
 
-        assertThat(game.grid[1][1], is(true));
+        assertThat(game.isAlive(1, 1), is(true));
     }
 
     @Test
@@ -182,7 +182,7 @@ public class LifeTest {
 
         game.tick();
 
-        assertThat(game.grid[1][1], is(true));
+        assertThat(game.isAlive(1, 1), is(true));
     }
 
 	@Test
@@ -195,6 +195,7 @@ public class LifeTest {
 
         game.tick();
 
-        assertThat(game.grid[0][1], is(true));
+        assertThat(game.isAlive(0, 1), is(true));
 	}
 }
+

@@ -1,7 +1,11 @@
 package com.kbaribeau.conway;
 
 public class Game {
-    boolean[][] grid;
+    private boolean[][] grid;
+
+	public boolean isAlive(int y, int x) {
+		return grid[y][x];
+	}
 
     public Game(String start) {
         int sizeX = start.indexOf("\n");
