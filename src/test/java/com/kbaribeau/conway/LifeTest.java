@@ -82,9 +82,9 @@ public class LifeTest {
 	@Test
 	public void deadGrid_ShouldStayDead() {
 		String start =
-				"...\n" +
-				"...\n" +
-				"...";
+			"...\n" +
+			"...\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
@@ -95,9 +95,9 @@ public class LifeTest {
 	@Test
 	public void ruleOne_CellsWithZeroNeighborsShouldDie() {
 		String start =
-				"X..\n" +
-				"...\n" +
-				"...";
+			"X..\n" +
+			"...\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
@@ -108,9 +108,9 @@ public class LifeTest {
 	@Test
 	public void ruleOne_CellsWithOneNeighborShouldDie() {
 		String start =
-				"X..\n" +
-				"X..\n" +
-				"...";
+			"X..\n" +
+			"X..\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
@@ -123,9 +123,9 @@ public class LifeTest {
 	@Test
 	public void ruleTwo_CellsWithFourNeighborsShouldDie() {
 		String start =
-				"XXX\n" +
-				"XX.\n" +
-				"...";
+			"XXX\n" +
+			"XX.\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
@@ -136,9 +136,9 @@ public class LifeTest {
 	@Test
 	public void ruleTwo_CellsWithFiveNeighborsShouldDie() {
 		String start =
-				"XXX\n" +
-				"XXX\n" +
-				"...";
+			"XXX\n" +
+			"XXX\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
@@ -149,9 +149,9 @@ public class LifeTest {
 	@Test
 	public void ruleTwo_CellsWithEightNeighborsShouldDie() {
 		String start =
-				"XXX\n" +
-				"XXX\n" +
-				"XXX";
+			"XXX\n" +
+			"XXX\n" +
+			"XXX";
 		Game game = new Game(start);
 
 		game.tick();
@@ -162,9 +162,9 @@ public class LifeTest {
 	@Test
 	public void ruleThree_CellsWithTwoNeighborsShouldLiveOn() {
 		String start =
-				"X..\n" +
-				"XX.\n" +
-				"...";
+			"X..\n" +
+			"XX.\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
@@ -175,9 +175,9 @@ public class LifeTest {
 	@Test
 	public void ruleThree_CellsWithThreeNeighborsShouldLiveOn() {
 		String start =
-				"X..\n" +
-				"XX.\n" +
-				"...";
+			"X..\n" +
+			"XX.\n" +
+			"...";
 		Game game = new Game(start);
 
 		game.tick();
