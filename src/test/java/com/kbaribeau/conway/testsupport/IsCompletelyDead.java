@@ -1,5 +1,6 @@
-package com.kbaribeau.conway;
+package com.kbaribeau.conway.testsupport;
 
+import com.kbaribeau.conway.Game;
 import org.hamcrest.BaseMatcher;
 import org.hamcrest.Description;
 
